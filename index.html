@@ -132,6 +132,53 @@
       box-shadow: 0 18px 36px rgba(0, 0, 0, 0.04);
     }
 
+    /* SPECIAL STYLING FOR EVENTS SECTION */
+    .section-events {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #fff7ef 0%, #ffffff 40%, #ffe4cf 100%);
+      border: 1px solid #f3ddc9;
+    }
+
+    .section-events::before,
+    .section-events::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(196,143,106,0.17) 0, transparent 55%);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .section-events::before {
+      top: -140px;
+      left: -80px;
+    }
+
+    .section-events::after {
+      bottom: -140px;
+      right: -80px;
+    }
+
+    .event-day-chip {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(244, 218, 196, 0.7);
+      color: var(--accent-strong);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .event-icon {
+      font-size: 20px;
+      margin-right: 6px;
+    }
+
     .section-title {
       font-family: "Playfair Display", serif;
       font-size: 22px;
@@ -297,17 +344,16 @@
       <div class="tagline">Together with their families</div>
 
       <div class="names-script">Taruna &amp; Kaustubh</div>
-     <div style="
-    text-align:center;
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    font-size: 22px;
-    color: var(--accent-strong);
-    margin-top: 10px;">
-  #TarKa
-</div>
-
+      <div style="
+        text-align:center;
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        font-size: 22px;
+        color: var(--accent-strong);
+        margin-top: 10px;">
+        #TarKa
+      </div>
 
       <div class="subtext">
         invite you to celebrate their wedding in the Pink City
@@ -346,19 +392,20 @@
     </div>
 
     <!-- WEDDING EVENTS -->
-    <section class="section">
+    <section class="section section-events">
       <h2 class="section-title">Wedding Events</h2>
       <p class="section-subtitle">
-        Two days of haldi, music, pheras and lots of dancing.
+        Two days of haldi, music, pheras and lots of dancing in the Pink City.
       </p>
 
       <ul class="events-list">
         <!-- 7 March – Haldi + Lunch Carnival -->
         <li class="event-item">
           <div>
+            <div class="event-day-chip">Day 1 · 7 March</div>
             <div class="event-name">
-              Haldi &amp; Carnival<br/>
-              <span class="badge">7 March 11:00 AM</span>
+              <span class="event-icon">🌼</span>Haldi &amp; Carnival<br/>
+              <span class="badge">11:00 AM onwards</span>
             </div>
           </div>
           <div class="event-meta">
@@ -370,9 +417,10 @@
         <!-- 7 March – Engagement + Sangeet -->
         <li class="event-item">
           <div>
+            <div class="event-day-chip">Day 1 · 7 March</div>
             <div class="event-name">
-              Engagement Ceremony &amp; Sangeet<br/>
-              <span class="badge">7 March 7:00 PM</span>
+              <span class="event-icon">🥂</span>Engagement Ceremony &amp; Sangeet<br/>
+              <span class="badge">7:00 PM onwards</span>
             </div>
           </div>
           <div class="event-meta">
@@ -384,26 +432,27 @@
         <!-- 8 March – Wedding -->
         <li class="event-item">
           <div>
+            <div class="event-day-chip">Day 2 · 8 March</div>
             <div class="event-name">
-              Wedding (Varmala &amp; Pheras)<br/>
-              <span class="badge">8 March 10:00 AM</span>
+              <span class="event-icon">💍</span>Wedding (Varmala &amp; Pheras)<br/>
+              <span class="badge">10:00 AM onwards</span>
             </div>
           </div>
-         <div class="event-meta">
-  Varmala at the Lawn Area<br/>
-  Pheras at the Poolside Area<br/>
-  <span class="highlight">Indana Palace, Jaipur</span><br/>
-  Dress code: <strong>Traditional — anything but red</strong>.
-</div>
-
+          <div class="event-meta">
+            Varmala at the Lawn Area<br/>
+            Pheras at the Poolside Area<br/>
+            <span class="highlight">Indana Palace, Jaipur</span><br/>
+            Dress code: <strong>Traditional — anything but red</strong>.
+          </div>
         </li>
 
         <!-- 8 March – Reception -->
         <li class="event-item">
           <div>
+            <div class="event-day-chip">Day 2 · 8 March</div>
             <div class="event-name">
-              Reception <br/>
-              <span class="badge">8 March 7:00 PM onwards</span>
+              <span class="event-icon">✨</span>Reception<br/>
+              <span class="badge">7:00 PM onwards</span>
             </div>
           </div>
           <div class="event-meta">
@@ -424,7 +473,7 @@
         Indana Palace, Jaipur<br/>
         Kukas, Jaipur, Rajasthan, India
       </p>
-     
+
       <a
         class="btn-primary"
         href="https://www.google.com/maps?q=Indana+Palace+Jaipur"
@@ -433,11 +482,10 @@
       >
         Open in Google Maps
       </a>
-     
     </section>
 
-    <!-- RSVP -->
-   <!-- <section class="section">
+    <!-- RSVP (currently commented out)
+    <section class="section">
       <h2 class="section-title">RSVP</h2>
       <p class="section-subtitle">
         Help us plan the right number of plates, hugs and dance performances.
@@ -447,21 +495,17 @@
         number of guests and any special requests.
       </p>
 
-      <!-- Button link to Google Form -->
-   <!--   <a
+      <a
         class="btn-primary"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSc4MWiVDMXsjW5q4RN6JD4UQDvY8LFbu7eIVQjG_4YJYAttBw/formResponse"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSc4MWiVDMXsjW5q4RN6JD4UQDvY8LFbu7eIVQjG_4YJYAttBw/viewform"
         target="_blank"
         rel="noopener noreferrer"
       >
         Open RSVP Form
       </a>
 
-     
-
-      <!-- Embedded form (optional) -->
-   <!--   <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSc4MWiVDMXsjW5q4RN6JD4UQDvY8LFbu7eIVQjG_4YJYAttBw/viewform"
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSc4MWiVDMXsjW5q4RN6JD4UQDvY8LFbu7eIVQjG_4YJYAttBw/viewform?embedded=true"
       >
         Loading…
       </iframe>
@@ -474,19 +518,19 @@
 
     <footer>
       With love,<br/>
-     <span class="heart">♥</span> #TarKa <span class="heart">♥</span>
+      <span class="heart">♥</span> #TarKa <span class="heart">♥</span>
     </footer>
   </div>
 
-  <!-- BACKGROUND MUSIC -->
-  <!-- Put music.mp3 in the same folder as index.html or adjust the path -->
- <!--  <div class="music-player">
+  <!-- BACKGROUND MUSIC (currently commented out)
+  <div class="music-player">
     <span class="music-label">Tap to play our song 🎵</span>
     <audio controls loop>
       <source src="music.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
-  </div> -->
+  </div>
+  -->
 
   <script>
     // Slideshow logic
