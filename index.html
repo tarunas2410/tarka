@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Taruna & Kaustubh - Wedding Invitation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fdf8f4;
+      --card: #ffffff;
+      --accent: #c48f6a;
+      --accent-soft: #f4e1d4;
+      --accent-strong: #b37451;
+      --text-main: #2f2b28;
+      --text-muted: #7a6d64;
+      --border-soft: #f1e4da;
+    }
+    body { font-family: "Inter", sans-serif; background: var(--bg); margin: 0; padding: 0; color: var(--text-main); }
+    .wrapper { max-width: 980px; margin: 0 auto; padding: 24px 16px 56px; }
+    header { text-align: center; padding: 40px 16px 25px; }
+    .tagline { letter-spacing: 0.22em; text-transform: uppercase; font-size: 11px; color: var(--text-muted); margin-bottom: 12px; }
+    .names { font-family: "Playfair Display", serif; font-size: 42px; letter-spacing: 0.06em; }
+    .ampersand { font-size: 30px; opacity: 0.7; margin: 0 6px; }
+    .subtext { margin-top: 10px; font-size: 14px; color: var(--text-muted); }
+    .date-location { margin-top: 18px; font-size: 14px; }
+    .chip { display: inline-block; padding: 5px 12px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; margin-top: 14px; }
+
+    /* SLIDESHOW */
+    .slideshow-container {
+      position: relative; width: 100%; max-width: 820px; height: 420px;
+      margin: 30px auto 40px auto; border-radius: 20px; overflow: hidden;
+      background: #eee; box-shadow: 0 18px 40px rgba(0,0,0,0.08);
+    }
+    .slide {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      opacity: 0; transition: opacity 1s ease-in-out;
+      background-size: cover; background-position: center;
+    }
+    .slide.active { opacity: 1; }
+
+    /* SECTIONS */
+    .section { margin-top: 26px; background: var(--card); border-radius: 20px;
+      padding: 22px 20px; box-shadow: 0 18px 36px rgba(0, 0, 0, 0.04); }
+    .section-title { font-family: "Playfair Display", serif; font-size: 22px; margin-bottom: 10px; }
+    .section-subtitle { font-size: 13px; color: var(--text-muted); margin-bottom: 10px; }
+    .events-list { list-style: none; margin-top: 8px; }
+    .event-item {
+      padding: 11px 0; border-bottom: 1px solid var(--border-soft);
+      display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.6fr); gap: 10px;
+    }
+    .event-name { font-weight: 600; font-size: 15px; }
+    .event-meta { font-size: 13px; color: var(--text-muted); }
+    .badge { background: var(--accent-soft); color: var(--accent); font-size: 11px;
+      padding: 2px 8px; border-radius: 999px; margin-left: 6px; }
+    .highlight { color: var(--accent-strong); font-weight: 600; }
+
+    .btn-primary {
+      margin-top: 14px; padding: 10px 20px; border-radius: 999px;
+      background: var(--accent); color: white; text-decoration: none;
+      font-size: 14px; display: inline-block;
+      box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+    }
+    iframe { width: 100%; border: none; border-radius: 14px; margin-top: 14px;
+      min-height: 430px; background: #faf6f2; }
+    footer { text-align: center; font-size: 11px; color: var(--text-muted); margin-top: 26px; }
+  </style>
+</head>
+
+<body>
+<div class="wrapper">
+
+<header>
+  <div class="tagline">Together with their families</div>
+  <div class="names">Taruna <span class="ampersand">&amp;</span> Kaustubh</div>
+  <div class="subtext">invite you to celebrate their wedding weekend</div>
+  <div class="date-location">Saturday, 15 February 2026 · New Delhi, India</div>
+  <div class="chip">Save the date · RSVP inside</div>
+</header>
+
+<!-- SLIDESHOW -->
+<div class="slideshow-container">
+<div class='slide active' style='background-image:url("photos/photo1.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo2.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo3.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo4.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo5.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo6.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo7.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo8.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo9.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo10.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo11.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo12.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo13.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo14.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo15.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo16.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo17.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo18.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo19.jpg");'></div>
+<div class='slide' style='background-image:url("photos/photo20.jpg");'></div>
+</div>
+
+<script>
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+function showNext() {
+  slides[index].classList.remove('active');
+  index = (index + 1) % slides.length;
+  slides[index].classList.add('active');
+}
+setInterval(showNext, 2500);
+</script>
+
+<!-- EVENTS -->
+<section class="section">
+  <h2 class="section-title">Wedding Events</h2>
+  <p class="section-subtitle">Here’s the plan for the celebrations.</p>
+
+  <ul class="events-list">
+    <li class="event-item">
+      <div>
+        <div class="event-name">Mehndi &amp; Sangeet <span class="badge">Dance + Mehndi</span></div>
+        <div class="event-meta">Friday, 14 February 2026 · 7:00 PM onwards</div>
+      </div>
+      <div class="event-meta">Brighton Lawn, <span class="highlight">XYZ Venue</span><br/>Dress code: Colourful.</div>
+    </li>
+
+    <li class="event-item">
+      <div>
+        <div class="event-name">Wedding Ceremony <span class="badge">Pheras</span></div>
+        <div class="event-meta">Saturday, 15 February 2026 · 5:30 PM</div>
+      </div>
+      <div class="event-meta">Main Banquet Hall, <span class="highlight">XYZ Venue</span><br/>Dress code: Indian Traditional.</div>
+    </li>
+
+    <li class="event-item">
+      <div>
+        <div class="event-name">Reception <span class="badge">Cocktails + Dinner</span></div>
+        <div class="event-meta">Saturday, 15 February 2026 · 8:30 PM onwards</div>
+      </div>
+      <div class="event-meta">Poolside Deck, <span class="highlight">XYZ Venue</span><br/>Dress code: Elegant/Formal.</div>
+    </li>
+  </ul>
+</section>
+
+<!-- VENUE -->
+<section class="section">
+  <h2 class="section-title">Venue & Directions</h2>
+  <p class="section-subtitle">XYZ Wedding Resort · Sector 123 · New Delhi</p>
+  <a class="btn-primary" href="https://maps.google.com" target="_blank">Open Google Maps</a>
+</section>
+
+<!-- RSVP -->
+<section class="section">
+  <h2 class="section-title">RSVP</h2>
+  <p class="section-subtitle">Let us know you're coming 💛</p>
+  <a class="btn-primary" href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank">Open RSVP Form</a>
+  <iframe src="https://docs.google.com/forms/d/e/YOUR_EMBED_FORM_ID/viewform?embedded=true">Loading…</iframe>
+</section>
+
+<footer>With love · Taruna ♥ Kaustubh</footer>
+
+</div>
+</body>
+</html>
