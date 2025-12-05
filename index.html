@@ -579,6 +579,55 @@
     text-align: left;
   }
 }
+/* GROUPED EVENTS BY DAY */
+.event-grid-wrapper {
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.event-row-title {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent-strong);
+  margin: 22px 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.event-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.event-card {
+  flex: 1;
+  background: #fff7ef;
+  border-radius: 18px;
+  padding: 16px 18px;
+  border: 1px solid #f3ddc9;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.04);
+}
+
+.event-card .event-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.event-card .event-meta {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 700px) {
+  .event-row {
+    flex-direction: column;
+  }
+}
 
   </style>
 </head>
@@ -781,62 +830,62 @@
       <h2 class="section-title">Wedding Events</h2>
       <p class="section-subtitle">
         Two days of haldi, music, pheras and lots of dancing in the Pink City.
-      </p>
-      <ul class="event-grid">
-        <!-- 7 March – Haldi + Lunch Carnival -->
-        <li class="event-card">
-          <div class="event-day-chip">Day 1 · 7 March</div>
-          <div class="event-name">
-            <span class="event-icon">🌼</span> Haldi &amp; Carnival
-          </div>
-          <div class="event-meta">
-            Lawn Area, <span class="highlight">Indana Palace, Jaipur</span><br/>
-            <span class="badge">11:00 AM onwards</span><br/>
-            Dress code: <strong>Yellow / Orange</strong> — come ready for colour, photos, and a lot of fun.
-          </div>
-        </li>
+      </p><ul class="event-grid-wrapper">
 
-        <!-- 7 March – Engagement + Sangeet -->
-        <li class="event-card">
-          <div class="event-day-chip">Day 1 · 7 March</div>
-          <div class="event-name">
-            <span class="event-icon">🥂</span> Engagement Ceremony &amp; Sangeet
-          </div>
-          <div class="event-meta">
-            Banquet Hall, <span class="highlight">Indana Palace, Jaipur</span><br/>
-            <span class="badge">7:00 PM onwards</span><br/>
-            Dress code: <strong>Dark / Colourful</strong> — rich colours, shimmer and lots of twirls.
-          </div>
-        </li>
+  <!-- DAY 1 ROW -->
+  <li class="event-row-title">Day 1 · 7 March</li>
 
-        <!-- 8 March – Wedding -->
-        <li class="event-card">
-          <div class="event-day-chip">Day 2 · 8 March</div>
-          <div class="event-name">
-            <span class="event-icon">💍</span> Wedding (Varmala &amp; Pheras)
-          </div>
-          <div class="event-meta">
-            Varmala at the Lawn Area<br/>
-            Pheras at the Poolside Area<br/>
-            <span class="badge">10:00 AM onwards</span><br/>
-            <span class="highlight">Indana Palace, Jaipur</span><br/>
-            Dress code: <strong>Traditional — anything except red</strong>.
-          </div>
-        </li>
+  <div class="event-row">
+    <!-- Haldi -->
+    <div class="event-card">
+      <div class="event-name"><span class="event-icon">🌼</span> Haldi &amp; Carnival</div>
+      <div class="event-meta">
+        Lawn Area, <span class="highlight">Indana Palace, Jaipur</span><br/>
+        <span class="badge">11:00 AM onwards</span><br/>
+        Dress code: <strong>Yellow / Orange</strong>.
+      </div>
+    </div>
 
-        <!-- 8 March – Reception -->
-        <li class="event-card">
-          <div class="event-day-chip">Day 2 · 8 March</div>
-          <div class="event-name">
-            <span class="event-icon">✨</span> Reception
-          </div>
-          <div class="event-meta">
-            Lawn Area, <span class="highlight">Indana Palace, Jaipur</span><br/>
-            <span class="badge">7:00 PM onwards</span><br/>
-            Dress code: <strong>Anything you love</strong> — Indian or Western, just come as your fabulous self.
-          </div>
-        </li>
-      </ul>
+    <!-- Engagement + Sangeet -->
+    <div class="event-card">
+      <div class="event-name"><span class="event-icon">🥂</span> Engagement &amp; Sangeet</div>
+      <div class="event-meta">
+        Banquet Hall, <span class="highlight">Indana Palace, Jaipur</span><br/>
+        <span class="badge">7:00 PM onwards</span><br/>
+        Dress code: <strong>Dark / Colourful</strong>.
+      </div>
+    </div>
+  </div>
+
+
+  <!-- DAY 2 ROW -->
+  <li class="event-row-title">Day 2 · 8 March</li>
+
+  <div class="event-row">
+    <!-- Wedding -->
+    <div class="event-card">
+      <div class="event-name"><span class="event-icon">💍</span> Wedding</div>
+      <div class="event-meta">
+        Varmala: Lawn Area<br/>
+        Pheras: Poolside Area<br/>
+        <span class="badge">10:00 AM onwards</span><br/>
+        Dress code: <strong>Traditional — anything except red</strong>.
+      </div>
+    </div>
+
+    <!-- Reception -->
+    <div class="event-card">
+      <div class="event-name"><span class="event-icon">✨</span> Reception</div>
+      <div class="event-meta">
+        Lawn Area, <span class="highlight">Indana Palace, Jaipur</span><br/>
+        <span class="badge">7:00 PM onwards</span><br/>
+        Dress code: <strong>Anything you love</strong>.
+      </div>
+    </div>
+  </div>
+
+</ul>
+
 
     </section>
 
