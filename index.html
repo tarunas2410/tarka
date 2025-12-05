@@ -208,6 +208,44 @@
       grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.7fr);
       gap: 10px;
     }
+/* EVENT GRID CARDS (more scalable) */
+.event-grid {
+  list-style: none;
+  margin-top: 14px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.event-card {
+  background: rgba(255, 247, 239, 0.96);
+  border-radius: 18px;
+  padding: 14px 16px 16px;
+  border: 1px solid #f3ddc9;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.04);
+}
+
+.event-card .event-day-chip {
+  margin-bottom: 4px;
+}
+
+.event-card .event-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.event-card .event-meta {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.event-card .badge {
+  margin-left: 0;
+  margin-top: 4px;
+  display: inline-block;
+}
 
     .event-item:last-child {
       border-bottom: none;
@@ -730,10 +768,7 @@
           <div class="timeline-content">
             <div class="timeline-heading">And Now…</div>
             <div class="timeline-text">
-              From a golf date to scuba dives, from two proposals to a cat who genuinely thinks he owns them — 
-              their story has been full of laughter, competitiveness (mostly Taru), comfort, and so much love. 
-              Now they’re ready for the next chapter: choosing each other — with all the blushing, banter, underwater panic, 
-              and soft moments — for life.
+              From that first golf date to every adventure we’ve taken together, from saying yes twice to coming home to a cat who thinks he’s in charge — our journey has been filled with love, comfort, and all the little moments that make life feel complete. Now we’re stepping into the next chapter, choosing each other with all our quirks, laughter, and tenderness, for a lifetime.
             </div>
           </div>
         </div>
@@ -747,70 +782,62 @@
       <p class="section-subtitle">
         Two days of haldi, music, pheras and lots of dancing in the Pink City.
       </p>
-
-      <ul class="events-list">
+      <ul class="event-grid">
         <!-- 7 March – Haldi + Lunch Carnival -->
-        <li class="event-item">
-          <div>
-            <div class="event-day-chip">Day 1 · 7 March</div>
-            <div class="event-name">
-              <span class="event-icon">🌼</span>Haldi &amp; Carnival<br/>
-              <span class="badge">11:00 AM onwards</span>
-            </div>
+        <li class="event-card">
+          <div class="event-day-chip">Day 1 · 7 March</div>
+          <div class="event-name">
+            <span class="event-icon">🌼</span> Haldi &amp; Carnival
           </div>
           <div class="event-meta">
             Lawn Area, <span class="highlight">Indana Palace, Jaipur</span><br/>
-            Dress code: <strong>Yellow / Orange</strong> &middot; Come ready for colour, photos, and a lot of fun.
+            <span class="badge">11:00 AM onwards</span><br/>
+            Dress code: <strong>Yellow / Orange</strong> — come ready for colour, photos, and a lot of fun.
           </div>
         </li>
 
         <!-- 7 March – Engagement + Sangeet -->
-        <li class="event-item">
-          <div>
-            <div class="event-day-chip">Day 1 · 7 March</div>
-            <div class="event-name">
-              <span class="event-icon">🥂</span>Engagement Ceremony &amp; Sangeet<br/>
-              <span class="badge">7:00 PM onwards</span>
-            </div>
+        <li class="event-card">
+          <div class="event-day-chip">Day 1 · 7 March</div>
+          <div class="event-name">
+            <span class="event-icon">🥂</span> Engagement Ceremony &amp; Sangeet
           </div>
           <div class="event-meta">
             Banquet Hall, <span class="highlight">Indana Palace, Jaipur</span><br/>
-            Dress code: <strong>Dark / Colourful</strong> &middot; Think rich colours, shimmer and lots of twirls.
+            <span class="badge">7:00 PM onwards</span><br/>
+            Dress code: <strong>Dark / Colourful</strong> — rich colours, shimmer and lots of twirls.
           </div>
         </li>
 
         <!-- 8 March – Wedding -->
-        <li class="event-item">
-          <div>
-            <div class="event-day-chip">Day 2 · 8 March</div>
-            <div class="event-name">
-              <span class="event-icon">💍</span>Wedding (Varmala &amp; Pheras)<br/>
-              <span class="badge">10:00 AM onwards</span>
-            </div>
+        <li class="event-card">
+          <div class="event-day-chip">Day 2 · 8 March</div>
+          <div class="event-name">
+            <span class="event-icon">💍</span> Wedding (Varmala &amp; Pheras)
           </div>
           <div class="event-meta">
             Varmala at the Lawn Area<br/>
             Pheras at the Poolside Area<br/>
+            <span class="badge">10:00 AM onwards</span><br/>
             <span class="highlight">Indana Palace, Jaipur</span><br/>
             Dress code: <strong>Traditional — anything except red</strong>.
           </div>
         </li>
 
         <!-- 8 March – Reception -->
-        <li class="event-item">
-          <div>
-            <div class="event-day-chip">Day 2 · 8 March</div>
-            <div class="event-name">
-              <span class="event-icon">✨</span>Reception<br/>
-              <span class="badge">7:00 PM onwards</span>
-            </div>
+        <li class="event-card">
+          <div class="event-day-chip">Day 2 · 8 March</div>
+          <div class="event-name">
+            <span class="event-icon">✨</span> Reception
           </div>
           <div class="event-meta">
             Lawn Area, <span class="highlight">Indana Palace, Jaipur</span><br/>
-            Dress code: <strong>Anything you love</strong> &middot; Indian or Western, just come as your fabulous self.
+            <span class="badge">7:00 PM onwards</span><br/>
+            Dress code: <strong>Anything you love</strong> — Indian or Western, just come as your fabulous self.
           </div>
         </li>
       </ul>
+
     </section>
 
     <!-- VENUE & DIRECTIONS -->
